@@ -34,7 +34,7 @@ function Navbar({ openNav }) {
             `px-1 text-zinc-50 hover:text-zinc-400 ${isActive ? "text-zinc-500 " : "text-zinc-50"}`
 
           }>
-            {lable}
+           
 
           </NavLink>
         )}
