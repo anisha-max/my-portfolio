@@ -9,5 +9,16 @@ html{
 }
 
 body{
-    @apply bg-zinc-900 text-zinc-50
+    @apply bg-zinc-900 text-zinc-50;
+}
+
+.container{
+    padding: 40px;
+}
+
+.heading-1{
+    @apply max-w-max;
+    background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

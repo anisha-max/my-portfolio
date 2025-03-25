@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import Button from './Button';
 
 function Header() {
   const [openNav , setOpenNav] = useState(false)
@@ -44,7 +43,7 @@ function Header() {
           <Navbar openNav={openNav} />
 </div>
    
-   <Button lable={"Contact"} classname={`${hidden? "hidden" : "block"}`}/>
+   <button  classname={`${hidden? "hidden" : "block"}`}>Contact</button>
 
       </header>
     </div>
