@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoMdDownload } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
+import ProjectCard from './ProjectCard';
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
               <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping">
               </span>
             </span>
-            <p>       Lorem ipsum dolor,</p>
+            <p>Lorem ipsum dolor,</p>
 
           </div>
           <div className='text-5xl leading-tight font-semibold lg:text-[45px] lg:leading-1.5 heading-1 sm:max-w-[28ch] lg:max-w-[15ch]'>
@@ -42,6 +43,13 @@ function Home() {
           </figure>
         </div>
       </div>
+
+      <section className='container '>
+        <h3 className='font-bold text-3xl'>My Projects</h3>
+        <p className='text-zinc-400 text-lg my-5'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque reprehenderit praesentium excepturi. Eos, alias?
+        </p>
+        <ProjectCard />
+      </section>
     </section>
   )
 }

@@ -43,7 +43,7 @@ function Header() {
           <Navbar openNav={openNav} />
 </div>
    
-   <button  classname={`${hidden? "hidden" : "block"}`}>Contact</button>
+   <button  className={`${hidden? "hidden" : "block"}`}>Contact</button>
 
       </header>
     </div>
