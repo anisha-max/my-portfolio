@@ -60,7 +60,7 @@ function Skill() {
 
                 {
                     skills.map(({ image, name, des }, key) => (
-                        <div className='ring-inset ring-2 ring-zinc-50/10 rounded-2xl p-3  gap-3 transition-colors hover:bg-zinc-800 group' key={key}>
+                        <div className='ring-inset ring-2 ring-zinc-50/10 rounded-2xl p-3  gap-3 transition-colors hover:bg-zinc-800 ' key={key}>
                             <div className='flex items-center gap-3'>
                                 <figure className='bg-zinc-700/50 rounded-lg overflow-hidden p-2 group-hover:bg-zinc-900 ring-inset transition-colors ring-1 ring-zinc-500'>
                                     <img className='' src={image} width={50} height={50}>
