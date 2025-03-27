@@ -3,6 +3,7 @@ import { IoMdDownload } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import ProjectCard from './ProjectCard';
 import Reviews from './Reviews';
+import Contact from './Contact';
 
 function Home() {
   return (
@@ -54,12 +55,14 @@ function Home() {
 
       
       <section className='container '>
-        <h3 className='font-bold text-3xl'>Reviews</h3>
+      <h3 className='text-3xl font-bold text-zinc-100 mb-6'>Client Reviews</h3>
         <p className='text-zinc-400 text-lg my-5'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque reprehenderit praesentium excepturi. Eos, alias?
         </p>
         <Reviews />
       </section>
 
+
+<Contact/>
     </section>
   )
 }

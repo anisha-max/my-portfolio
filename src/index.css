@@ -22,3 +22,10 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.text-field{
+    @apply text-zinc-200 bg-zinc-800 text-sm p-3 rounded-xl ring-2 ring-inset ring-transparent hover:ring-zinc-50/5 focus:ring-2 focus:ring-sky-400
+}
+.text-field::placeholder{
+    @apply text-zinc-600
+}

@@ -1,60 +1,82 @@
 import React from 'react'
+import { FaStar, FaRegStar } from "react-icons/fa"
+
 const reviews = [
     {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam? ",
-        name: "lorem",
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam?",
+        name: "John Doe",
         imageSrc: "/imgaes/pic.png",
-        company: "lorem"
+        company: "Tech Corp",
+        rating: 5
     },
     {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam? ",
-        name: "lorem",
+        content: "A wonderful experience working with such a talented developer. Highly recommended!",
+        name: "Jane Smith",
         imageSrc: "/imgaes/pic.png",
-        company: "lorem"
+        company: "Creative Studio",
+        rating: 4
     },
     {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam? ",
-        name: "lorem",
+        content: "Professional, timely, and highly communicative throughout the project.",
+        name: "Alex Brown",
         imageSrc: "/imgaes/pic.png",
-        company: "lorem"
+        company: "Innovate Labs",
+        rating: 3
     },
     {
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ullam? ",
-        name: "lorem",
+        content: "Delivered beyond expectations! Will definitely collaborate again.",
+        name: "Michael Lee",
         imageSrc: "/imgaes/pic.png",
-        company: "lorem"
+        company: "Pixel Agency",
+        rating: 4
     }
 ]
 
 function Reviews() {
     return (
-        <section className='flex items-stretch gap-3 w-fit'>
-            {reviews.map(({ content, name, imageSrc, company }) => (
-                <div className='bg-zinc-800 p-5 rounded-lg min-w-[320px] flex flex-col lg:min-w-[420px}'>
+        <section className='container mx-auto px-4 py-10'>
 
-                    <div className='flex items-center gap-1 '>
-                        {
-//stars
-                        }
+            
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center'>
+                {reviews.map(({ content, name, imageSrc, company, rating }, key) => (
+                    <div
+                        className='bg-zinc-800 p-6 rounded-xl shadow-lg flex flex-col gap-4 hover:shadow-sky-500/30 transition-all duration-300 w-full max-w-[400px] mx-auto'
+                        key={key}
+                    >
+               
+                        <div className='flex items-center gap-1 text-amber-400 mb-2'>
+                            {Array.from({ length: 5 }).map((_, i) =>
+                                i < rating ? (
+                                    <FaStar key={i} className="w-4 h-4" />
+                                ) : (
+                                    <FaRegStar key={i} className="w-4 h-4 text-zinc-600" />
+                                )
+                            )}
+                        </div>
 
-                    </div>
+                     
+                        <p className='text-zinc-400 leading-relaxed text-sm sm:text-base'>
+                            "{content}"
+                        </p>
 
-                    <p className='text-zinc-400'>{content}</p>
-                    <div className='flex items-center gap-3 mt-auto'>
-                        <figure className='img-box rounded-lg'>
-                            <img src={imageSrc} alt='' className='' width={44} height={44}></img>
-                        </figure>
+                     
+                        <div className='flex items-center gap-4 mt-auto'>
+                            <figure className='w-12 h-12 overflow-hidden rounded-lg border border-zinc-700'>
+                                <img
+                                    src={imageSrc}
+                                    alt={name}
+                                    className='w-full h-full object-cover'
+                                />
+                            </figure>
 
-
-                        <div>
-                            <p className=' text-md'>{name}</p>
-                            <p className='text-xs text-zinc-400 tracking-wider'>{company}</p>
+                            <div>
+                                <p className='text-lg font-semibold text-zinc-100'>{name}</p>
+                                <p className='text-sm text-zinc-500'>{company}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-            ))}
-
+                ))}
+            </div>
         </section>
     )
 }

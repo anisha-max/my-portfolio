@@ -28,7 +28,7 @@ function ProjectCard() {
         <section className=' grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 md:grid-cols-3 gap-5 mx-auto'>
             {
                 Projects.map(({ title, gitLink, Tech }, key) => (
-                    <div className=" relative max-w-sm ring-inset ring-2 ring-zinc-50/10 rounded-lg shadow-sm bg-zinc-800/50" key={key}>
+                    <div className="relative max-w-sm ring-inset ring-2 ring-zinc-700/40 rounded-lg shadow-lg bg-zinc-800/50 hover:ring-sky-500/30 hover:shadow-sky-500/20 hover:scale-105 transition-all duration-300" key={key}>
                         <figure className=' rounded-lg aspect-square overflow-hidden p-2  '>
                             <img className="rounded-lg h-full " src="/imgaes/pic.png" alt="" />
                         </figure >
