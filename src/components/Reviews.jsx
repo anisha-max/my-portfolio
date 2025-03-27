@@ -35,15 +35,17 @@ const reviews = [
 function Reviews() {
     return (
         <section className='container mx-auto px-4 py-10'>
+            <h3 className='text-3xl font-bold text-zinc-100 mb-6'>Client Reviews</h3>
+            <p className='text-zinc-400 text-lg my-5'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque reprehenderit praesentium excepturi. Eos, alias?
+            </p>
 
-            
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center'>
                 {reviews.map(({ content, name, imageSrc, company, rating }, key) => (
                     <div
                         className='bg-zinc-800 p-6 rounded-xl shadow-lg flex flex-col gap-4 hover:shadow-sky-500/30 transition-all duration-300 w-full max-w-[400px] mx-auto'
                         key={key}
                     >
-               
+
                         <div className='flex items-center gap-1 text-amber-400 mb-2'>
                             {Array.from({ length: 5 }).map((_, i) =>
                                 i < rating ? (
@@ -54,12 +56,12 @@ function Reviews() {
                             )}
                         </div>
 
-                     
+
                         <p className='text-zinc-400 leading-relaxed text-sm sm:text-base'>
                             "{content}"
                         </p>
 
-                     
+
                         <div className='flex items-center gap-4 mt-auto'>
                             <figure className='w-12 h-12 overflow-hidden rounded-lg border border-zinc-700'>
                                 <img

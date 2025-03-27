@@ -8,6 +8,9 @@ import Layout from './components/Layout.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Skill from './components/Skill.jsx'
+import Github from './components/Github.jsx'
+import ProjectCard from './components/ProjectCard.jsx'
+import Contact from './components/Contact.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,18 @@ const router = createBrowserRouter([
       {
         path :"skills",
         element: <Skill/>
+      },
+      {
+        path :"github",
+        element: <Github/>
+      },
+      {
+        path :"projects",
+        element: <ProjectCard/>
+      },
+      {
+        path :"contact",
+        element: <Contact/>
       }
     ]
   }

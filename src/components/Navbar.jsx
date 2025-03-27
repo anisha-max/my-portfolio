@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+// Navigation Items
 const navItem = [
   {
     link: '/home',
@@ -11,7 +12,7 @@ const navItem = [
     lable: 'About'
   },
   {
-    link: '/project',
+    link: '/projects',
     lable: 'Projects'
   },
   {
@@ -27,17 +28,21 @@ const navItem = [
 function Navbar({ openNav }) {
   return (
     <>
-      <div className={`min-w-40 flex-col flex right-0 absolute  ring-inset bg-zinc-600 ring-1 ring-zinc-500 p-2 rounded-xl  md:flex-row md:top-1  ${openNav ? 'block' : 'hidden'
-        } md:static md:block`}>
-        {navItem.map(({ link, lable }, key) =>
-          <NavLink to={link} key={key} className={({ isActive }) =>
-            `px-1 text-zinc-50 hover:text-zinc-400 ${isActive ? "text-zinc-500 " : "text-zinc-50"}`
-
-          }>
-           {lable}
-
+      <div
+        className={`min-w-40 flex-col flex right-0 absolute ring-inset bg-zinc-700/90 ring-1 ring-zinc-500 p-3 rounded-xl shadow-lg transition-all duration-300 ease-in-out md:flex-row md:top-1 ${openNav ? 'block' : 'hidden'
+          } md:static md:block`}
+      >
+        {navItem.map(({ link, lable }, key) => (
+          <NavLink
+            to={link}
+            key={key}
+            className={({ isActive }) =>
+              `px-3 py-2 text-zinc-50 text-sm font-medium rounded-lg hover:text-sky-400 transition duration-300 ease-in-out ${isActive ? 'text-sky-400 bg-zinc-800' : 'text-zinc-50'}`
+            }
+          >
+            {lable}
           </NavLink>
-        )}
+        ))}
       </div>
     </>
   )

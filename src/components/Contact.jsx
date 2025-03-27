@@ -8,7 +8,7 @@ const socialLinks = [
 
 function Contact() {
     return (
-        <section className='container mx-auto px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
+        <section className='container mx-auto mt-8 px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
             <div className='lg:grid lg:grid-cols-2 lg:gap-12 items-start'>
           
                 <div className='lg:flex lg:flex-col justify-center mb-8 lg:mb-0'>
@@ -78,8 +78,6 @@ function Contact() {
                             className='text-field border border-zinc-700 bg-zinc-900 text-white rounded-lg p-3 focus:ring-2 focus:ring-sky-400 focus:outline-none'
                         />
                     </div>
-
-                    {/* Message */}
                     <div className='flex flex-col gap-2'>
                         <label
                             htmlFor="message"
@@ -96,8 +94,6 @@ function Contact() {
                             className='text-field border border-zinc-700 bg-zinc-900 text-white rounded-lg p-3 resize-y focus:ring-2 focus:ring-sky-400 focus:outline-none'
                         />
                     </div>
-
-                    {/* Submit Button */}
                     <button
                         type="submit"
                         className='w-full bg-sky-500 text-white text-lg font-semibold py-3 rounded-lg hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all duration-200 shadow-lg hover:scale-105'
