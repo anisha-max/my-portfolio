@@ -1,14 +1,15 @@
 import React from 'react'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const socialLinks = [
-    { href: 'https://twitter.com', icon: '🐦' },
-    { href: 'https://linkedin.com', icon: '🔗' },
-    { href: 'https://github.com', icon: '🐙' }
+    { href: 'mailto:parmaranisha761@gmail.com', icon:<FaEnvelope/> },
+    { href: 'https://www.linkedin.com/in/anisha-parmar-997160309/', icon: <FaLinkedin/> },
+    { href: 'https://github.com/anisha-max', icon: <FaGithub/> }
 ]
 
 function Contact() {
     return (
-        <section className='container mx-auto mt-8 px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
+        <section className='container mt-8 px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
             <div className='lg:grid lg:grid-cols-2 lg:gap-12 items-start'>
           
                 <div className='lg:flex lg:flex-col justify-center mb-8 lg:mb-0'>

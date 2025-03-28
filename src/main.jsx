@@ -11,35 +11,37 @@ import Skill from './components/Skill.jsx'
 import Github from './components/Github.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
 import Contact from './components/Contact.jsx'
+import GitLoader from './components/GitLoader.js'
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Layout/>,
+    path: '/',
+    element: <Layout />,
     children: [
       {
-        path :"home",
-        element: <Home/>
+        path: "home",
+        element: <Home />
       },
       {
-        path :"about",
-        element: <About/>
+        path: "about",
+        element: <About />
       },
       {
-        path :"skills",
-        element: <Skill/>
+        path: "skills",
+        element: <Skill />
       },
       {
-        path :"github",
-        element: <Github/>
+        path: "github",
+        element: <Github />,
+        loader: GitLoader
       },
       {
-        path :"projects",
-        element: <ProjectCard/>
+        path: "projects",
+        element: <ProjectCard />
       },
       {
-        path :"contact",
-        element: <Contact/>
+        path: "contact",
+        element: <Contact />
       }
     ]
   }
@@ -47,6 +49,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )

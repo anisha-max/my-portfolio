@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 function Github() {
-    const url = "https://api.github.com/users/anisha-max"
-    const [data, setData] = useState(null)
 
-    useEffect(() => {
-        fetch(url)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data")
-                }
-                return response.json()
-            })
-            .then((res) => {
-                setData(res)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, [])
+    const data = useLoaderData()
+
 
     return (
         <section className="bg-black min-h-screen flex items-center justify-center p-6">
@@ -29,7 +15,7 @@ function Github() {
                     <img
                         className="w-full rounded-[65px]"
                         width={400}
-                        src="/imgaes/pic.png" 
+                        src="/images/pic.png" 
                         alt="developer image"
                     />
                 </figure>

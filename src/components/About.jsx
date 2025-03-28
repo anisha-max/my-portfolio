@@ -6,6 +6,14 @@ const aboutItem = [
     lable: 'Projects',
     number: 10,
   },
+  {
+    lable: 'Intership',
+    number:" 2" ,
+  },
+  {
+    lable: 'Hackthon',
+    number:"3" ,
+  },
 ]
 
 function About() {

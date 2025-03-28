@@ -3,51 +3,52 @@ import React from 'react'
 function Skill() {
   const skills = [
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
       name: 'JavaScript',
       des: 'Powerful language for building web applications.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       name: 'React',
       des: 'Component-based frontend library for building UIs.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
       name: 'MongoDB',
       des: 'NoSQL database for handling large-scale data.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
       name: 'Node.js',
       des: 'JavaScript runtime environment for backend development.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
       name: 'GitHub',
       des: 'Platform to manage code, collaborate, and deploy.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://www.svgrepo.com/show/354431/tailwindcss-icon.svg',
       name: 'Tailwind CSS',
       des: 'Utility-first CSS framework for faster UI development.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
       name: 'Bootstrap',
       des: 'Responsive design framework with prebuilt components.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
       name: 'HTML5',
       des: 'The backbone of web content and structure.',
     },
     {
-      image: '/images/pic.png',
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
       name: 'CSS3',
       des: 'Styling language to bring web pages to life.',
     },
-  ]
+  ];
+  
 
   return (
     <section className="container mx-auto px-6 lg:px-12 py-12">

@@ -6,6 +6,12 @@ import Contact from './Contact'
 import About from './About'
 
 function Home() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/public.txt';
+    link.download = 'Anisha_Resume.pdf'; // Rename file on download
+    link.click();
+  };
   return (
     <>
       <div className=" min-h-[70vh] flex">
@@ -23,7 +29,7 @@ function Home() {
               Crafting Clean and Scalable Code with Passion.
             </h1>
             <div className="flex pt-4 gap-4">
-              <button className="btn bg-sky-400 hover:bg-sky-300 text-zinc-900 flex items-center gap-2 text-lg font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-sky-400/50">
+              <button onClick={handleDownload} className="btn bg-sky-400 hover:bg-sky-300 text-zinc-900 flex items-center gap-2 text-lg font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-sky-400/50">
                 Download CV <IoMdDownload />
               </button>
             </div>
