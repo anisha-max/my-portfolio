@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
+import {Me} from "images/me.png"
 
 function Github() {
   const data = useLoaderData();
@@ -58,7 +59,7 @@ function Github() {
         >
           <img
             className="rounded-lg object-cover "
-            src="/images/me.png"
+            src={Me}
             alt="Developer"
           />
         </motion.figure>
