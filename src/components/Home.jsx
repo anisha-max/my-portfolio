@@ -1,7 +1,6 @@
 import React from 'react';
 import { IoMdDownload } from 'react-icons/io';
 import { motion } from 'framer-motion';
-import {Me} from "images/me.png"
 import ProjectCard from './ProjectCard';
 import About from './About';
 
@@ -48,7 +47,7 @@ function Home() {
           >
             <div className="w-[20vw] h-full md:h-full overflow-hidden rounded-xl shadow-xl border-2 mx-auto border-cyan-500">
               <img
-                src={Me}
+                src="/my-portfolio/me.png"
                 alt="Anisha profile"
                 className="w-full h-full object-cover object-top"
               />
