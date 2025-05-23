@@ -7,25 +7,25 @@ function ProjectCard() {
       title: "All React Projects",
       gitLink: "https://github.com/anisha-max/Reactprojects",
       Tech: ["React", "Tailwind" ,"Redux"], 
-       src:"/images/react2.png"
+       src:"/my-portfolio/react2.png"
     },
     {
       title: "All Javascript Projects",
       gitLink: "https://github.com/anisha-max/javascript_practice",
       Tech: ["JavaScript" , "API" ], 
-       src:"/images/js.png"
+       src:"/my-portfolio/js.png"
     },
     {
       title: "Internship Contribution",
       gitLink: "https://www.sevenunique.com/",
       Tech: ["Node.js", "MongoDB" , "React" , "Axios", "Redux"]
-      ,  src:"/images/sevenunique.png"
+      ,  src:"/my-portfolio/sevenunique.png"
     },
     {
       title: "Galaxy Game",
       gitLink: "https://github.com/anisha-max/Previous-projects",
       Tech: ["Python"], 
-       src:"/images/galaxy.png"
+       src:"/my-portfolio/galaxy.png"
     }
   ]
 
