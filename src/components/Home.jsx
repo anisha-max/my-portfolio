@@ -1,67 +1,82 @@
-import React from 'react'
-import { IoMdDownload } from "react-icons/io"
-import ProjectCard from './ProjectCard'
-import Reviews from './Reviews'
-import Contact from './Contact'
-import About from './About'
+import React from 'react';
+import { IoMdDownload } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import ProjectCard from './ProjectCard';
+import About from './About';
 
 function Home() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/public.txt';
-    link.download = 'Anisha_Resume.pdf'; // Rename file on download
+    link.href = '/AnishaParmar _resume.pdf';
+    link.download = 'Anisha_Resume.pdf';
     link.click();
   };
+
   return (
     <>
-      <div className=" min-h-[70vh] flex">
-        <div className="md:grid md:grid-cols-2 md:gap-8 items-center xl:max-w-6xl  mx-auto">
-          <div className="space-y-3"> 
-            <div className="flex text-zinc-400 gap-2">
-              <span className="relative w-3 h-3 rounded-full bg-emerald-500">
-                <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping"></span>
-              </span> 
-              <p className="text-sm">Available for Work</p>
-            </div>
-
-         
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white lg:leading-snug max-w-[28ch] lg:max-w-[18ch] mt-2">
-              Crafting Clean and Scalable Code with Passion.
+      <section className="min-h-[90vh] flex items-center justify-center bg-[#0a0f1c] text-white">
+        <div className="w-full max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
+          <motion.div
+            className="space-y-6 text-center md:text-left"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+              Hi, I'm <span className="text-cyan-400">Anisha</span>
             </h1>
-            <div className="flex pt-4 gap-4">
-              <button onClick={handleDownload} className="btn bg-sky-400 hover:bg-sky-300 text-zinc-900 flex items-center gap-2 text-lg font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-lg hover:shadow-sky-400/50">
-                Download CV <IoMdDownload />
-              </button>
+            <p className="text-gray-300 text-lg max-w-md mx-auto md:mx-0">
+            Full Stack Developer passionate about building clean, scalable, and intuitive applications — built with experience, attention to detail, and a commitment to writing efficient, maintainable code. I focus on delivering high-quality solutions that solve real-world problems and provide great user experiences.
+            </p>
+            <div className="pt-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleDownload}
+                className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 text-lg rounded-xl flex items-center gap-2 shadow-md transition"
+              >
+                Download CV <IoMdDownload className="text-xl" />
+              </motion.button>
             </div>
-          </div>
-          <div className="hidden md:block">
-            <figure className="w-full max-w-[420px] mx-auto bg-gradient-to-t from-sky-400 via-25% via-sky-500 to-65% rounded-[55px] overflow-hidden shadow-2xl">
+          </motion.div>
+          <motion.div
+            className="w-full h-full"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="w-[20vw] h-full md:h-full overflow-hidden rounded-xl shadow-xl border-2 mx-auto border-cyan-500">
               <img
-                className="w-full rounded-[55px] hover:scale-105 transition-transform duration-500 ease-in-out"
-                width={380}
-                src="/images/pic.png"
-                alt="Developer Image"
+                src="/images/me.png"
+                alt="Anisha profile"
+                className="w-full h-full object-cover object-top"
               />
-            </figure>
-          </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <About />
+      </motion.div>
 
-<div className='container'>
-<About/>
-</div>
-
-<div className='container'>
-<ProjectCard />
-</div>
-    
-<div className='md:mx-20 mb-5'>
-<Contact />
-</div>
-    
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
+        <ProjectCard />
+      </motion.div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

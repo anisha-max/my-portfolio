@@ -1,38 +1,51 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 function ProjectCard() {
   const Projects = [
     {
-      title: "Project One",
-      gitLink: "/",
-      Tech: ["React", "Tailwind"]
+      title: "All React Projects",
+      gitLink: "https://github.com/anisha-max/Reactprojects",
+      Tech: ["React", "Tailwind" ,"Redux"], 
+       src:"/images/react2.png"
     },
     {
-      title: "Project Two",
-      gitLink: "/",
-      Tech: ["JavaScript", "API"]
+      title: "All Javascript Projects",
+      gitLink: "https://github.com/anisha-max/javascript_practice",
+      Tech: ["JavaScript" , "API" ], 
+       src:"/images/js.png"
     },
     {
-      title: "Project Three",
-      gitLink: "/",
-      Tech: ["Node.js", "MongoDB"]
+      title: "Internship Contribution",
+      gitLink: "https://www.sevenunique.com/",
+      Tech: ["Node.js", "MongoDB" , "React" , "Axios", "Redux"]
+      ,  src:"/images/sevenunique.png"
     },
     {
-      title: "Project Four",
-      gitLink: "/",
-      Tech: ["Next.js", "TypeScript"]
+      title: "Galaxy Game",
+      gitLink: "https://github.com/anisha-max/Previous-projects",
+      Tech: ["Python"], 
+       src:"/images/galaxy.png"
     }
   ]
 
   return (
-    <section className="mx-auto px-6 lg:px-12 py-10">
+    <section className="mx-auto px-6 lg:px-12 ">
+       <motion.div
+              className="md:mx-20 mb-20 py-14"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+            
       <h3 className="font-bold text-4xl text-white">My Projects</h3>
       <p className="text-zinc-400 text-lg my-4 max-w-2xl">
         Here are some of my latest projects built using modern technologies and best practices.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-auto mt-8">
-        {Projects.map(({ title, gitLink, Tech }, key) => (
+        {Projects.map(({ title, gitLink, Tech ,src}, key) => (
           <div
             key={key}
             className="relative max-w-sm bg-zinc-800/50 rounded-lg shadow-lg ring-1 ring-zinc-700/40 
@@ -44,7 +57,7 @@ function ProjectCard() {
             <figure className="rounded-lg aspect-[5/3] overflow-hidden p-3"> {/* Adjusted aspect ratio */}
               <img
                 className="rounded-lg w-full h-[180px] object-cover hover:scale-105 transition-transform duration-300"
-                src="/images/pic.png"
+                src={src}
                 alt={title}
               />
             </figure>
@@ -93,6 +106,7 @@ function ProjectCard() {
           </div>
         ))}
       </div>
+        </motion.div>
     </section>
   )
 }

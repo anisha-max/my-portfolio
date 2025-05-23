@@ -1,5 +1,6 @@
 import React from 'react'
 import Skill from './Skill'
+import { motion } from 'framer-motion'
 
 const aboutItem = [
   {
@@ -19,14 +20,16 @@ const aboutItem = [
 function About() {
   return (
     <section className="container px-6 lg:px-12 pt-8">
+         <motion.div
+              className="md:mx-20 mb-20 py-14"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
       <div className="bg-zinc-800 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
         <p className="text-zinc-300 leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, rem?
-          Quibusdam nemo placeat possimus optio minus tempora quisquam
-          consequuntur omnis doloremque molestias. Suscipit id voluptas deleniti
-          qui maxime cumque tempora, exercitationem iste vel repellendus officia.
-          Cupiditate accusantium vero maxime consectetur adipisci ipsam iure
-          voluptatibus magni! Deserunt tenetur placeat facilis veniam!
+        I am a Full Stack Developer with internship experience, during which I have contributed to more than 10 projects ranging from web applications to dynamic user interfaces. I have actively participated in 3+ hackathons, sharpening my problem-solving skills and adapting quickly to new challenges. I’m passionate about building scalable, efficient, and user-friendly applications, and I’m currently available for work opportunities where I can bring my experience and dedication to your team.
         </p>
         <div className="flex flex-wrap items-center gap-6 md:gap-10 pt-6">
           {aboutItem.map(({ lable, number }, key) => (
@@ -51,6 +54,8 @@ function About() {
       </div>
 
       <Skill/>
+  
+        </motion.div>
     </section>
   )
 }

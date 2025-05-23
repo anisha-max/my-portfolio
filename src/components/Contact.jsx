@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { motion } from 'framer-motion'
 
 const socialLinks = [
     { href: 'mailto:parmaranisha761@gmail.com', icon:<FaEnvelope/> },
@@ -9,7 +10,17 @@ const socialLinks = [
 
 function Contact() {
     return (
+        
         <section className='container mt-8 px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
+            <motion.div
+        className="md:mx-20 mb-20 py-14"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+ 
+    
             <div className='lg:grid lg:grid-cols-2 lg:gap-12 items-start'>
           
                 <div className='lg:flex lg:flex-col justify-center mb-8 lg:mb-0'>
@@ -103,6 +114,7 @@ function Contact() {
                     </button>
                 </form>
             </div>
+            </motion.div>
         </section>
     )
 }

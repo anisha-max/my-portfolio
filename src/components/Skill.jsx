@@ -13,6 +13,11 @@ function Skill() {
       des: 'Component-based frontend library for building UIs.',
     },
     {
+      image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+      name: 'Next.js',
+      des: 'React-based framework for building full-stack web applications.',
+    },
+    {
       image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
       name: 'MongoDB',
       des: 'NoSQL database for handling large-scale data.',
