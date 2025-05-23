@@ -53,8 +53,8 @@ function ProjectCard() {
                       transition-all duration-300 ease-in-out 
                       hover:scale-105 active:scale-95"
           >
-            {/* Image Section */}
-            <figure className="rounded-lg aspect-[5/3] overflow-hidden p-3"> {/* Adjusted aspect ratio */}
+      
+            <figure className="rounded-lg aspect-[5/3] overflow-hidden p-3"> 
               <img
                 className="rounded-lg w-full h-[180px] object-cover hover:scale-105 transition-transform duration-300"
                 src={src}
@@ -62,9 +62,9 @@ function ProjectCard() {
               />
             </figure>
 
-            {/* Card Content */}
+         
             <div className="p-4 space-y-3">
-              {/* Tech Tags */}
+ 
               <div className="flex flex-wrap gap-2 mb-2">
                 {Tech.map((tech, index) => (
                   <p
@@ -76,10 +76,9 @@ function ProjectCard() {
                 ))}
               </div>
 
-              {/* Project Title */}
               <h6 className="text-2xl font-bold text-zinc-50">{title}</h6>
 
-              {/* GitHub Link Button */}
+          
               <a
                 href={gitLink}
                 className="absolute right-5 top-5 bg-sky-400 text-zinc-950 w-10 h-10 grid place-items-center rounded-lg hover:bg-sky-300 transition-all duration-300"
