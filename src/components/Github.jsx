@@ -49,7 +49,7 @@ function Github() {
         <FaGithub className="mr-3" /> GitHub Developer Dashboard
       </motion.h1>
 
-      {/* Profile section */}
+  
       <div className="lg:grid lg:grid-cols-2 lg:gap-14 w-full max-w-6xl items-center">
         <motion.figure
           className="rounded-xl overflow-hidden   hover:scale-105 transition-transform duration-300 ease-in-out "
@@ -91,7 +91,6 @@ function Github() {
         </motion.div>
       </div>
 
-      {/* Contributions + Stats */}
       {username && (
         <motion.div
           className="mt-16 w-full max-w-5xl space-y-8"

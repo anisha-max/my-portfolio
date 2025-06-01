@@ -67,15 +67,15 @@ function Skill() {
         </p>
       </div>
 
-      {/* Skills Grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map(({ image, name, des }, key) => (
           <div
             key={key}
-            className="bg-zinc-800/70 rounded-xl p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
+            className="bg-zinc-800 rounded-xl p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
           >
             <div className="flex items-center gap-4">
-              {/* Skill Icon */}
+ 
               <figure className="bg-zinc-700/50 p-3 rounded-lg shadow-md ring-1 ring-zinc-500/20 transition-transform hover:scale-105">
                 <img
                   src={image}

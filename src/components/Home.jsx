@@ -3,6 +3,9 @@ import { IoMdDownload } from 'react-icons/io';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import About from './About';
+import { NavLink } from 'react-router-dom'
+import HexagonBackground from './HexagonBackground';
+import { FiHome, FiUser, FiFolder, FiGithub, FiMail } from "react-icons/fi";
 
 function Home() {
   const handleDownload = () => {
@@ -11,53 +14,77 @@ function Home() {
     link.download = 'Anisha_Resume.pdf';
     link.click();
   };
+ const navItem = [
+  {
+    link: '/home',
+    icon: <FiHome />,
+  },
+  {
+    link: '/about',
+    icon: <FiUser />,
+  },
+  {
+    link: '/projects',
+    icon: <FiFolder />,
+  },
+  {
+    link: '/github',
+    icon: <FiGithub />,
+  },
+  {
+    link: '/contact',
+    icon: <FiMail />,
+  },
+];
+
+
 
   return (
     <>
-      <section className="min-h-[90vh] flex items-center justify-center bg-[#0a0f1c] text-white">
-        <div className="w-full max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
-          <motion.div
-            className="space-y-6 text-center md:text-left"
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-              Hi, I'm <span className="text-cyan-400">Anisha</span>
-            </h1>
-            <p className="text-gray-300 text-lg max-w-md mx-auto md:mx-0">
+      <HexagonBackground />
+      <section className='flex w-full  overflow-hidden  text-white md:px-10'>
+        <div className=' pt-36 px-4 flex'>
+      <div>
+            <h1 className='text-6xl'>Anisha Parmar</h1>
+          <p className='italic text-[24px] pt-2'>Web Developer</p>
+          <p className="text-gray-300 text-lg max-w-xl">
             Full Stack Developer passionate about building clean, scalable, and intuitive applications — built with experience, attention to detail, and a commitment to writing efficient, maintainable code. I focus on delivering high-quality solutions that solve real-world problems and provide great user experiences.
-            </p>
-            <div className="pt-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleDownload}
-                className="bg-cyan-500 hover:bg-cyan-400 text-black font-semibold px-6 py-3 text-lg rounded-xl flex items-center gap-2 shadow-md transition"
-              >
-                Download CV <IoMdDownload className="text-xl" />
-              </motion.button>
-            </div>
-          </motion.div>
-          <motion.div
-            className="w-full h-full"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+          </p>
+          <button
+            onClick={handleDownload}
+            className="px-4 my-4 py-2 rounded text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:from-sky-600 hover:via-sky-700 hover:to-sky-800 transition duration-300"
           >
-            <div className="w-[20vw] h-full md:h-full overflow-hidden rounded-xl shadow-xl border-2 mx-auto border-cyan-500">
-              <img
-                src="/my-portfolio/me.png"
-                alt="Anisha profile"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-          </motion.div>
+            Download Resume <IoMdDownload className='float-right ms-2 text-xl mt-1'/>
+          </button>
+      </div>
+         <img src="images/developer.png" className='h-[30rem] ms-32 hidden lg:block  hover:scale-105 transition-transform duration-300 ease-in-out '></img>
+        </div>
+
+     
+
+        <div className='ml-auto my-auto bg-[#111] p-3 rounded-lg  border border-sky-400'>
+          <ul>
+            {navItem.map(({ link, icon }, key) => (
+              <li key={key} className="mb-4 last:mb-0">
+                <NavLink
+                  to={link}
+                  className={({ isActive }) =>
+                    ` text-2xl font-bold hover:text-sky-400 transition duration-300 ease-in-out ${isActive ? 'text-sky-400 bg-zinc-800' : 'text-zinc-50'
+                    }`
+                  }
+                >
+                  {icon}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+
         </div>
       </section>
 
+
       <motion.div
-        className=""
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -67,7 +94,6 @@ function Home() {
       </motion.div>
 
       <motion.div
-        className=""
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
@@ -75,6 +101,10 @@ function Home() {
       >
         <ProjectCard />
       </motion.div>
+
+
+
+
     </>
   );
 }

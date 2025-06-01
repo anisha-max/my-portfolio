@@ -48,7 +48,7 @@ function ProjectCard() {
         {Projects.map(({ title, gitLink, Tech ,src}, key) => (
           <div
             key={key}
-            className="relative max-w-sm bg-zinc-800/50 rounded-lg shadow-lg ring-1 ring-zinc-700/40 
+            className="relative max-w-sm bg-zinc-800 rounded-lg shadow-lg ring-1 ring-zinc-700/40 
                       hover:ring-sky-500/30 hover:shadow-sky-500/20 
                       transition-all duration-300 ease-in-out 
                       hover:scale-105 active:scale-95"
