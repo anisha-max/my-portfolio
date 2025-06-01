@@ -1,6 +1,7 @@
 import React from 'react'
 import Skill from './Skill'
 import { motion } from 'framer-motion'
+import HexagonBackground from './HexagonBackground';
 
 const aboutItem = [
   {
@@ -20,6 +21,7 @@ const aboutItem = [
 function About() {
   return (
     <section className="container px-6 lg:px-12 pt-8">
+            <HexagonBackground />
          <motion.div
               className="md:mx-20 mb-20 py-14"
               initial={{ opacity: 0, y: 60 }}
@@ -54,7 +56,6 @@ function About() {
       </div>
 
       <Skill/>
-  
         </motion.div>
     </section>
   )

@@ -64,7 +64,7 @@ const Footer = () => {
  
       <div className="border-t border-gray-700 mt-6">
         <div className="container mx-auto px-6 py-4 text-center text-gray-500 text-xs">
-          &copy; {new Date().getFullYear()} YourName. All rights reserved.
+          &copy; {new Date().getFullYear()} Anisha Parmar. All rights reserved.
         </div>
       </div>
     </footer>

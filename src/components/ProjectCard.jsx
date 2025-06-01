@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import HexagonBackground from './HexagonBackground';
 
 function ProjectCard() {
   const Projects = [
@@ -30,7 +31,8 @@ function ProjectCard() {
   ]
 
   return (
-    <section className="mx-auto px-6 lg:px-12 ">
+    <section className="mx-auto px-6 lg:px-12 pt-2 ">
+      <HexagonBackground/>
        <motion.div
               className="md:mx-20 mb-20 py-14"
               initial={{ opacity: 0, y: 60 }}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
+import HexagonBackground from './HexagonBackground';
 
 function Github() {
   const data = useLoaderData();
@@ -36,14 +37,16 @@ function Github() {
   };
 
   return (
+   <>
+    <HexagonBackground/>
     <motion.section
-      className="min-h-screen px-6 py-16 flex flex-col items-center bg-gradient-to-br from-[#0f172a] to-[#1e293b]"
+      className="min-h-screen px-6 py-16 flex flex-col items-center "
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <motion.h1
-        className="text-4xl font-bold mb-10 text-center flex items-center text-cyan-400"
+        className="text-4xl font-bold mb-10 text-center flex items-center text-sky-400"
         variants={itemVariants}
       >
         <FaGithub className="mr-3" /> GitHub Developer Dashboard
@@ -64,13 +67,13 @@ function Github() {
         </motion.figure>
 
         <motion.div
-          className="p-8 rounded-xl shadow-lg mt-10 lg:mt-0 space-y-4 bg-[#1e293b]/90 backdrop-blur-md text-gray-100"
+          className="p-8 rounded-xl shadow-lg mt-10 lg:mt-0 space-y-4 bg-zinc-800 backdrop-blur-md text-gray-100"
           variants={profileCardVariants}
           whileHover="hover"
         >
           {data ? (
             <>
-              <h2 className="text-2xl font-semibold mb-3 flex items-center text-cyan-400">
+              <h2 className="text-2xl font-semibold mb-3 flex items-center text-sky-400">
                 <FaGithub className="mr-2" /> Profile Overview
               </h2>
               <ProfileItem label="Name" value={data.name} icon="user" color="text-slate-300" />
@@ -97,11 +100,11 @@ function Github() {
           variants={itemVariants}
         >
           <motion.div
-            className="rounded-xl shadow-lg p-6 backdrop-blur-md bg-[#1e293b]/90 text-gray-100"
+            className="rounded-xl shadow-lg p-6 backdrop-blur-md bg-zinc-800 text-gray-100"
             variants={profileCardVariants}
             whileHover="hover"
           >
-            <h3 className="text-xl font-semibold text-center mb-4 text-cyan-400">
+            <h3 className="text-xl font-semibold text-center mb-4 text-sky-400">
               GitHub Stats
             </h3>
             <div className="flex flex-col items-center justify-center gap-6">
@@ -125,13 +128,14 @@ function Github() {
         </motion.div>
       )}
     </motion.section>
+    </>
   );
 }
 
 const ProfileItem = ({ label, value, icon, color }) => (
   <p className="text-lg flex items-center text-slate-200">
     <span className={`w-5 h-5 mr-2 ${color}`}>🔹</span>
-    <span className="font-semibold text-cyan-400">{label}:</span> {value}
+    <span className="font-semibold text-sky-400">{label}:</span> {value}
   </p>
 );
 

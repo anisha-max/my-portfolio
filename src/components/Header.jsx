@@ -1,53 +1,81 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import Navbar from './Navbar'
-import { FaBars } from "react-icons/fa";
-import { IoCloseSharp } from "react-icons/io5";
+import React, { useEffect, useState } from 'react';
+import { FaBars, FaPhone, FaAward } from 'react-icons/fa';
+import { IoCloseSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 function Header() {
-  const [openNav , setOpenNav] = useState(false)
-  const [hidden , setHidden] = useState(false)
+  const navLinks = [
+    { name: 'Home', to: '/' },
+    { name: 'About', to: '/about' },
+    { name: 'Projects', to: '/projects' },
+    { name: 'Contact', to: '/contact' },
+     { name: 'Github', to: '/github' },
+  ];
 
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const toggleMenu = () => {
+    if (isMobile) setMenuOpen((prev) => !prev);
+  };
 
   useEffect(() => {
-    const handleResize =() => {
-      setHidden(window.innerWidth < 768)
-    }
-  
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (!mobile) setMenuOpen(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div>
-      <header className='fixed-top relative bg-zinc-800 h-12 w-100 flex justify-between items-center px-5'>
-        <div>
-          <h1>
-            <Link to={"/"}>
-              Logo
-            </Link>
-          </h1>
+    <>
+      <header className='fixed top-0 left-0 right-0 bg-gradient-to-r from-sky-600 via-sky-800 to-sky-900 text-white shadow-md z-50'>
+        <div className='flex items-center justify-between h-14 px-5 max-w-7xl mx-auto'>
+          <Link to="/" className="text-xl font-bold">Logo</Link>
+          <ul className='hidden md:flex gap-6'>
+            {navLinks.map(({ name, to }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className="hover:text-sky-300 transition"
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className='flex gap-3'>
+            <Link to="/contact" className="text-xl hover:text-sky-300"><FaAward /></Link>
+            <Link to="/contact" className="text-xl hover:text-sky-300"><FaPhone /></Link>
+     
+            <button className="md:hidden text-2xl" onClick={toggleMenu}>
+              {menuOpen ? <IoCloseSharp /> : <FaBars />}
+            </button>
+          </div>
         </div>
-       
-<div>
-  
-<button
-          className='md:hidden bg-zinc-600 p-1 rounded-sm hover:bg-zinc-500 '
-          onClick={()=> setOpenNav((prev)=> !prev)}
-        >
-         {openNav ? <IoCloseSharp/> : <FaBars/>}
-        </button>
-          <Navbar openNav={openNav} />
-</div>
-   
-   <Link to={"contact"}  className={`${hidden? "hidden" : "block"}`}>Contact</Link>
 
+  
+        {menuOpen && isMobile && (
+          <ul className="flex flex-col gap-4 px-5 pb-4 bg-sky-900 md:hidden">
+            {navLinks.map(({ name, to }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className="block py-1 hover:text-sky-300 transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
       </header>
-    </div>
-  )
+    </>
+  );
 }
 
-export default Header
+export default Header;

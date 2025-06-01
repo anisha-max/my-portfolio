@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion'
+import HexagonBackground from './HexagonBackground';
 
 const socialLinks = [
     { href: 'mailto:parmaranisha761@gmail.com', icon:<FaEnvelope/> },
@@ -10,8 +11,8 @@ const socialLinks = [
 
 function Contact() {
     return (
-        
-        <section className='container mt-8 px-4 py-12 bg-zinc-800 rounded-lg text-zinc-100'>
+        <section className='container mt-8 px-4 py-12 rounded-lg text-zinc-100'>
+             <HexagonBackground/>
             <motion.div
         className="md:mx-20 mb-20 py-14"
         initial={{ opacity: 0, y: 60 }}
