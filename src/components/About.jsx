@@ -27,7 +27,7 @@ function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-      <div className="bg-zinc-700 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
+      <div className="bg-zinc-800 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
         <p className="text-zinc-300 leading-relaxed text-lg">
         I am a Full Stack Developer with internship experience, during which I have contributed to more than 10 projects ranging from web applications to dynamic user interfaces. I have actively participated in 3+ hackathons, sharpening my problem-solving skills and adapting quickly to new challenges. I’m passionate about building scalable, efficient, and user-friendly applications, and I’m currently available for work opportunities where I can bring my experience and dedication to your team.
         </p>
