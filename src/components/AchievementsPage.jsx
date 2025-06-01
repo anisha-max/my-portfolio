@@ -1,4 +1,4 @@
-// src/pages/AchievementsPage.js
+
 import React from 'react';
 
 const AchievementsPage = () => {
@@ -84,20 +84,21 @@ const AchievementsPage = () => {
   ];
 
   return (
-    <div className="py-10 px-5 max-w-6xl mx-auto font-sans text-gray-900">
-      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Our Achievements</h1>
-      <div className="flex flex-wrap justify-center gap-6">
-        {achievements.map((achievement) => (
-          <AchievementCard
-            key={achievement.id} 
-            title={achievement.title}
-            description={achievement.description}
-            imageUrl={achievement.imageUrl}
-            tags={achievement.tags}
-          />
-        ))}
-      </div>
-    </div>
+    // <div className="py-10 px-5 max-w-6xl mx-auto font-sans text-gray-900">
+    //   <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Our Achievements</h1>
+    //   <div className="flex flex-wrap justify-center gap-6">
+    //     {achievements.map((achievement) => (
+    //       <AchievementCard
+    //         key={achievement.id} 
+    //         title={achievement.title}
+    //         description={achievement.description}
+    //         imageUrl={achievement.imageUrl}
+    //         tags={achievement.tags}
+    //       />
+    //     ))}
+    //   </div>
+    // </div>
+    <></>
   );
 };
 
