@@ -48,7 +48,7 @@ function Header() {
             ))}
           </ul>
           <div className='flex gap-3'>
-            <Link to="/contact" className="text-xl hover:text-sky-300"><FaAward /></Link>
+            <Link to="/achivements" className="text-xl hover:text-sky-300"><FaAward /></Link>
             <Link to="/contact" className="text-xl hover:text-sky-300"><FaPhone /></Link>
      
             <button className="md:hidden text-2xl" onClick={toggleMenu}>

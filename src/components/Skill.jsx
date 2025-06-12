@@ -56,7 +56,7 @@ function Skill() {
   
 
   return (
-    <section className="container mx-auto px-6 lg:px-12 py-12">
+    <section className="md:container mx-auto px-6 lg:px-12 py-12">
       <div className=" mb-12">
         <h2 className="text-3xl font-bold text-white mb-3">
           Essential Tools I Use
@@ -68,11 +68,11 @@ function Skill() {
       </div>
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map(({ image, name, des }, key) => (
           <div
             key={key}
-            className="bg-zinc-800 rounded-xl p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
+            className="bg-zinc-800 rounded-xl p-2 md:p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
           >
             <div className="flex items-center gap-4">
  
@@ -80,13 +80,10 @@ function Skill() {
                 <img
                   src={image}
                   alt={name}
-                  width={40}
-                  height={40}
-                  className="object-contain"
+                 
+                  className="object-contain w-[40px] h-[40px] min-w-[40px]"
                 />
               </figure>
-
-              {/* Skill Details */}
               <div>
                 <h3 className="text-lg font-bold text-white">{name}</h3>
                 <p className="text-sm text-zinc-400">{des}</p>

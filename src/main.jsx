@@ -12,6 +12,7 @@ import Github from './components/Github.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
 import Contact from './components/Contact.jsx'
 import GitLoader from './components/GitLoader.js'
+import AchievementsPage from './components/AchievementsPage.jsx';
 
 const router = createHashRouter([
   {
@@ -25,6 +26,7 @@ const router = createHashRouter([
       { path: 'github', element: <Github />, loader: GitLoader },
       { path: 'projects', element: <ProjectCard /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'achivements', element: <AchievementsPage /> },
     ]
   }
 ]);

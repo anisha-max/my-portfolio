@@ -1,105 +1,76 @@
+import { motion } from "framer-motion";
+import HexagonBackground from './HexagonBackground';
 
-import React from 'react';
+const achievements = [
+  {
+    title: "1st Place – Hackathon X",
+    date: "March 2024",
+    description: "Built a climate dashboard using React and Node.js.",
+    image: "galaxy.png",
+  },
+  {
+    title: "React Mastery Certification",
+    date: "June 2023",
+    description: "Completed an advanced React course from XYZ Academy.",
+    image: "react.png",
+  },
+  {
+    title: "100+ GitHub Stars",
+    date: "Nov 2023",
+    description: "Created a form-handling library for React.",
+    image: "react2.png",
+  },
+];
 
-const AchievementsPage = () => {
-//   const AchievementCard = ({ title, description, imageUrl, tags }) => {
-//     return (
-//       <div className="
-//         bg-white rounded-2xl overflow-hidden shadow-lg
-//         flex flex-col w-72 h-96 m-4 relative
-//         transform transition-transform duration-300 hover:scale-105
-//         hover:shadow-xl
-//       ">
-//         {/* Card Image Container */}
-//         <div className="w-full h-3/5 overflow-hidden flex justify-center items-center">
-//           <img src={imageUrl} alt={title} className="w-full h-full object-cover block" />
-//         </div>
-
-//         {/* Card Content */}
-//         <div className="p-5 flex flex-col justify-between flex-grow text-gray-800">
-//           {title && <h3 className="text-xl font-semibold mb-2 leading-tight">{title}</h3>}
-//           {description && <p className="text-base text-gray-600 mb-4 text-justify">{description}</p>}
-//           {tags && tags.length > 0 && (
-//             <div className="flex flex-wrap gap-2 mt-auto">
-//               {tags.map((tag, index) => (
-//                 <span
-//                   key={index} 
-//                   className="bg-gray-100 rounded-md px-3 py-1 text-sm font-medium text-gray-700"
-//                 >
-//                   {tag}
-//                 </span>
-//               ))}
-//             </div>
-//           )}
-          
-//         </div>
-//       </div>
-//     );
-//   };
-
- 
-//   const achievements = [
-//     {
-//       id: 1,
-//       title: 'Snowy Peaks',
-//       description: 'A breathtaking view of snow-capped mountains and a serene lake under a cloudy sky.',
-//       imageUrl: 'https://images.unsplash.com/photo-1549880338-7f9379685a21?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: [],
-//     },
-//     {
-//       id: 2,
-//       title: 'Ocean Whirlpool',
-//       description: 'The powerful and mesmerizing beauty of ocean currents forming a natural vortex.',
-//       imageUrl: 'https://images.unsplash.com/photo-1563248882-9571e43b6795?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: [],
-//     },
-//     {
-//       id: 3,
-//       title: 'Dancing Dunes',
-//       description: 'Capturing the breathtaking beauty of sand dunes through artistic lensmanship.',
-//       imageUrl: 'https://images.unsplash.com/photo-1499532598687-34651347ce6c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: ['Photography', 'Art Direction'],
-//     },
-//     {
-//       id: 4,
-//       title: 'Rocky Coastline',
-//       description: 'Dramatic sea stacks and rugged cliffs battered by the relentless ocean waves.',
-//       imageUrl: 'https://images.unsplash.com/photo-1510253634065-ad0399d8d672?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: [],
-//     },
-//     {
-//       id: 5,
-//       title: 'Forest Mist',
-//       description: 'The mystical ambiance of a forest covered in a soft, ethereal mist.',
-//       imageUrl: 'https://images.unsplash.com/photo-1473212660462-df2ad700a9fa?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: ['Nature', 'Atmosphere'],
-//     },
-//     {
-//       id: 6,
-//       title: 'Urban Night Lights',
-//       description: 'The vibrant glow of city lights against the dark canvas of the night sky.',
-//       imageUrl: 'https://images.unsplash.com/photo-1582236109919-61849174092b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-//       tags: ['Cityscape', 'Night Photography'],
-//     }
-//   ];
-
+export default function AchievementsPage() {
   return (
-    // <div className="py-10 px-5 max-w-6xl mx-auto font-sans text-gray-900">
-    //   <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Our Achievements</h1>
-    //   <div className="flex flex-wrap justify-center gap-6">
-    //     {achievements.map((achievement) => (
-    //       <AchievementCard
-    //         key={achievement.id} 
-    //         title={achievement.title}
-    //         description={achievement.description}
-    //         imageUrl={achievement.imageUrl}
-    //         tags={achievement.tags}
-    //       />
-    //     ))}
-    //   </div>
-    // </div>
-    <></>
-  );
-};
+    <main className="p-10 mx-auto max-w-5xl">
+          <HexagonBackground/>
+      <h1 className="text-3xl pt-10 text-center md:text-4xl font-bold text-white mb-4 break-words leading-tight">
+        Achievements
+      </h1>
+      <div className="grid gap-16">
+        {achievements.map((item, idx) => {
+          const isEven = idx % 2 === 0;
+          const containerDirection = isEven ? "md:flex-row" : "md:flex-row-reverse";
+          const Rounded = isEven
+            ? "rounded-l-full md:rounded-r-lg"
+            : "rounded-r-full md:rounded-l-lg";
 
-export default AchievementsPage;
+          return (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.2, type: "spring", stiffness: 70 }}
+              whileHover={{ scale: 1.02 }}
+              className="bg-white dark:bg-zinc-800 rounded-3xl shadow-xl overflow-hidden border border-zinc-600 transition-transform"
+            >
+              <div
+                className={`flex flex-col ${containerDirection} items-center md:items-stretch`}
+              >
+                <div className="relative w-full md:w-1/3 p-4 ">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className={`h-64 w-full object-cover ${Rounded}`}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-b from-transparent to-zinc-700/30 ${Rounded}`} />
+                </div>
+
+                <div className="p-6 md:w-2/3 space-y-2">
+                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+                    {item.title}
+                  </h2>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
+                  <hr className="my-2 border-t border-gray-300 dark:border-gray-700" />
+                  <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </main>
+  );
+}

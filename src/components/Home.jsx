@@ -69,7 +69,6 @@ function Home() {
         <Contact/>
       </motion.div>
 
-<AchievementsPage/>
     </>
   );
 }
