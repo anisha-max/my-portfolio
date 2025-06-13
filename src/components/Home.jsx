@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import About from './About';
 import { NavLink } from 'react-router-dom'
-import HexagonBackground from './HexagonBackground';
+
 import Contact from './Contact'
 import Navbar from './Navbar';
 import AchievementsPage from './AchievementsPage';
@@ -19,10 +19,10 @@ function Home() {
 
   return (
     <>
-      <HexagonBackground />
+   
       <section className='flex w-full  overflow-hidden  text-white md:px-10'>
         <div className=' pt-36 px-4 flex'>
-          <div>
+          <div className='md:ps-48'>
             <h1 className='text-6xl'>Anisha Parmar</h1>
             <p className='italic text-[26px] pt-2 font-bold text-sky-400'>Web Developer</p>
             <p className=" text-[20px] max-w-xl">

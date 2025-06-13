@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
-import HexagonBackground from './HexagonBackground';
+
 
 function Github() {
   const data = useLoaderData();
@@ -38,7 +38,7 @@ function Github() {
 
   return (
    <>
-    <HexagonBackground/>
+    
     <motion.section
       className="min-h-screen px-6 py-16 flex flex-col items-center "
       variants={containerVariants}

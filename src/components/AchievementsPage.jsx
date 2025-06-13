@@ -1,76 +1,154 @@
+import React from "react";
 import { motion } from "framer-motion";
-import HexagonBackground from './HexagonBackground';
+import AchievementCard from "./AchievementCard";
+import { Trophy, Award, Star } from "lucide-react";
+
 
 const achievements = [
   {
     title: "1st Place – Hackathon X",
     date: "March 2024",
-    description: "Built a climate dashboard using React and Node.js.",
+    description:
+      "Built a climate dashboard using React, Node.js, and public APIs to visualize CO₂ trends and weather impacts.",
     image: "galaxy.png",
+    category: "hackathon",
+    tags: ["React", "Node.js", "API", "Climate"],
+    link: "https://github.com/yourname/climate-dashboard",
   },
   {
     title: "React Mastery Certification",
     date: "June 2023",
-    description: "Completed an advanced React course from XYZ Academy.",
+    description:
+      "Completed an intensive 6-week advanced React certification from XYZ Academy covering hooks, state management, and testing.",
     image: "react.png",
+    category: "certification",
+    tags: ["React", "Hooks", "Testing"],
   },
   {
     title: "100+ GitHub Stars",
     date: "Nov 2023",
-    description: "Created a form-handling library for React.",
+    description:
+      "Created a lightweight form-handling library for React that gained traction in the open-source community.",
     image: "react2.png",
+    category: "project",
+    tags: ["React", "Open Source", "Forms"],
+    link: "https://github.com/yourname/react-form-lib",
   },
+];
+
+const headerVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+const statsVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.2 + 0.5,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const stats = [
+  { icon: Trophy, label: "Hackathons Won", value: "3+" },
+  { icon: Award, label: "Certifications", value: "5+" },
+  { icon: Star, label: "GitHub Stars", value: "500+" },
 ];
 
 export default function AchievementsPage() {
   return (
-    <main className="p-10 mx-auto max-w-5xl">
-          <HexagonBackground/>
-      <h1 className="text-3xl pt-10 text-center md:text-4xl font-bold text-white mb-4 break-words leading-tight">
-        Achievements
-      </h1>
-      <div className="grid gap-16">
-        {achievements.map((item, idx) => {
-          const isEven = idx % 2 === 0;
-          const containerDirection = isEven ? "md:flex-row" : "md:flex-row-reverse";
-          const Rounded = isEven
-            ? "rounded-l-full md:rounded-r-lg"
-            : "rounded-r-full md:rounded-l-lg";
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 relative overflow-hidden">
+ 
 
-          return (
+      {/* Header Section */}
+      <motion.header
+        className="relative z-10 pt-16 pb-8"
+        variants={headerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <motion.div
+            className="inline-block p-3 bg-zinc-800/50 backdrop-blur-sm rounded-2xl border border-zinc-700/50 mb-6"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Trophy className="w-12 h-12 text-sky-400 mx-auto" />
+          </motion.div>
+
+          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            My{" "}
+            <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-zinc-300 bg-clip-text text-transparent">
+              Achievements
+            </span>
+          </h1>
+
+          <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            A collection of milestones, certifications, and recognitions that
+            showcase my journey in technology and innovation.
+          </p>
+        </div>
+      </motion.header>
+
+      {/* Stats Section */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {stats.map((stat, index) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.2, type: "spring", stiffness: 70 }}
-              whileHover={{ scale: 1.02 }}
-              className="bg-white dark:bg-zinc-800 rounded-3xl shadow-xl overflow-hidden border border-zinc-600 transition-transform"
+              key={stat.label}
+              className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 text-center"
+              variants={statsVariants}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgba(39, 39, 42, 0.7)",
+              }}
             >
-              <div
-                className={`flex flex-col ${containerDirection} items-center md:items-stretch`}
-              >
-                <div className="relative w-full md:w-1/3 p-4 ">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className={`h-64 w-full object-cover ${Rounded}`}
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-b from-transparent to-zinc-700/30 ${Rounded}`} />
-                </div>
-
-                <div className="p-6 md:w-2/3 space-y-2">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {item.title}
-                  </h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
-                  <hr className="my-2 border-t border-gray-300 dark:border-gray-700" />
-                  <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
-                </div>
+              <stat.icon className="w-8 h-8 text-sky-400 mx-auto mb-3" />
+              <div className="text-3xl font-bold text-white mb-1">
+                {stat.value}
               </div>
+              <div className="text-zinc-400 text-sm">{stat.label}</div>
             </motion.div>
-          );
-        })}
+          ))}
+        </div>
       </div>
-    </main>
+
+      {/* Achievements List */}
+      <main className="px-6 py-16 max-w-6xl mx-auto">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center text-white mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Achievement Highlights
+        </motion.h2>
+
+        <div className="space-y-20">
+          {achievements.map((achievement, index) => (
+            <AchievementCard
+              key={index}
+              achievement={achievement}
+              index={index}
+            />
+          ))}
+        </div>
+      </main>
+    </div>
   );
 }

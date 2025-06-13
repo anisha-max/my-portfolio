@@ -34,7 +34,8 @@ function Header() {
     <>
       <header className='fixed top-0 left-0 right-0 bg-gradient-to-r from-sky-600 via-sky-800 to-sky-900 text-white shadow-md z-50'>
         <div className='flex items-center justify-between h-14 px-5 max-w-7xl mx-auto'>
-          <Link to="/" className="text-xl font-bold">Logo</Link>
+          <Link to="/" className="text-xl font-bold">
+          <img src='Anisha.png' className='w-[50px] rounded-full'></img></Link>
           <ul className='hidden md:flex gap-6'>
             {navLinks.map(({ name, to }) => (
               <li key={to}>
