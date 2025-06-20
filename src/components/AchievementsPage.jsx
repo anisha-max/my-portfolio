@@ -6,34 +6,43 @@ import { Trophy, Award, Star } from "lucide-react";
 
 const achievements = [
   {
-    title: "1st Place – Hackathon X",
-    date: "March 2024",
+    title: "Working as Junior Devloper",
+    date: "Current",
     description:
-      "Built a climate dashboard using React, Node.js, and public APIs to visualize CO₂ trends and weather impacts.",
-    image: "galaxy.png",
-    category: "hackathon",
-    tags: ["React", "Node.js", "API", "Climate"],
-    link: "https://github.com/yourname/climate-dashboard",
-  },
-  {
-    title: "React Mastery Certification",
-    date: "June 2023",
-    description:
-      "Completed an intensive 6-week advanced React certification from XYZ Academy covering hooks, state management, and testing.",
-    image: "react.png",
-    category: "certification",
-    tags: ["React", "Hooks", "Testing"],
-  },
-  {
-    title: "100+ GitHub Stars",
-    date: "Nov 2023",
-    description:
-      "Created a lightweight form-handling library for React that gained traction in the open-source community.",
+      "Contributed to the development, testing, and maintenance of web applications in a collaborative team environment. Assisted in building responsive UIs using React.js, managed backend APIs with Node.js and MongoDB, and participated in code reviews, debugging, and version control using Git. Gained hands-on experience with agile workflows, issue tracking, and integrating third-party APIs. Focused on writing clean, maintainable code and learning best practices from senior developers.",
     image: "react2.png",
     category: "project",
     tags: ["React", "Open Source", "Forms"],
-    link: "https://github.com/yourname/react-form-lib",
+    link: "",
   },
+  {
+    title: "Intership",
+    date: "Dec 2024",
+    description:
+      "Completed a hands-on internship focused on learning and contributing to real-world development projects. Gained experience in frontend development using technologies like HTML, CSS, JavaScript, and React, and worked with backend APIs built with Node.js and MongoDB. Assisted in debugging, feature implementation, UI improvements, and participated in team meetings and code reviews. Strengthened understanding of software development workflows, version control (Git), and deployment processes.",
+    image: "ANISHA.jpg",
+    category: "certification",
+    tags: ["React", "Hooks", "Project"],
+  },
+  {
+    title: "Successfully Deployed Full-Stack Web Applications",
+    date: "June 2025",
+    description:
+      "End-to-end development and deployment of scalable full-stack web applications on Renderb using modern technologies like Next.js, MongoDB, NextAuth, and ImageKit. Implemented secure user authentication, responsive UI, dynamic routing, and API integrations. Projects included real-time media handling, form processing, and cloud-based storage.",
+    image: "galaxy.png",
+    category: "Live projects",
+    tags: ["Next", "Node.js", "React" , "API", "ImageKit"],
+    link: "https://fullstack-video-application.onrender.com",
+  },
+  {
+    title: "React Mastery Certification",
+    date: "Oct 2024",
+    description:
+      "Completed an intensive advanced React certification from Scalar covering hooks, state management, and testing.",
+    image: "react_certificate.png",
+    category: "certification",
+    tags: ["React", "Hooks", "Project"],
+  }
 ];
 
 const headerVariants = {
@@ -62,17 +71,14 @@ const statsVariants = {
 };
 
 const stats = [
-  { icon: Trophy, label: "Hackathons Won", value: "3+" },
-  { icon: Award, label: "Certifications", value: "5+" },
-  { icon: Star, label: "GitHub Stars", value: "500+" },
+  { icon: Trophy, label: " Internship", value: "3+" },
+  { icon: Award, label: "Project", value: "5+" },
+  { icon: Star, label: "CGPA", value: "92+" },
 ];
 
 export default function AchievementsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 relative overflow-hidden">
- 
-
-      {/* Header Section */}
+    <div className="min-h-screen relative overflow-hidden">
       <motion.header
         className="relative z-10 pt-16 pb-8"
         variants={headerVariants}
@@ -95,7 +101,7 @@ export default function AchievementsPage() {
             </span>
           </h1>
 
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
             A collection of milestones, certifications, and recognitions that
             showcase my journey in technology and innovation.
           </p>
@@ -122,7 +128,7 @@ export default function AchievementsPage() {
               <div className="text-3xl font-bold text-white mb-1">
                 {stat.value}
               </div>
-              <div className="text-zinc-400 text-sm">{stat.label}</div>
+              <div className="text-white text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </div>

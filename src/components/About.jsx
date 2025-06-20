@@ -18,8 +18,8 @@ export default function About() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="bg-zinc-800 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
-          <p className="text-zinc-300 text-lg leading-relaxed">
+        <div className="bg-zinc-800/50 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
+          <p className="text-white text-lg leading-relaxed">
             I’m a Full Stack Developer with hands-on internship experience and a strong portfolio of over 10 projects—from dynamic user interfaces to full-fledged web apps. I've actively competed in 3+ hackathons, honing my skills in real-time collaboration and innovative problem-solving. I'm passionate about building user-centric, efficient, and scalable applications, and I'm currently open to work opportunities where I can contribute value to your team.
           </p>
 
@@ -38,7 +38,7 @@ export default function About() {
                     +
                   </span>
                 </div>
-                <p className="mt-2 text-md md:text-lg font-medium text-zinc-300">
+                <p className="mt-2 text-md md:text-lg font-medium text-white">
                   {label}
                 </p>
               </motion.div>

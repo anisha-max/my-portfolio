@@ -36,13 +36,13 @@ function Reviews() {
     return (
         <section className='container mx-auto px-4 py-10'>
             <h3 className='text-3xl font-bold text-zinc-100 mb-6'>Client Reviews</h3>
-            <p className='text-zinc-400 text-lg my-5'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque reprehenderit praesentium excepturi. Eos, alias?
+            <p className='text-white text-lg my-5'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga atque reprehenderit praesentium excepturi. Eos, alias?
             </p>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-center'>
                 {reviews.map(({ content, name, imageSrc, company, rating }, key) => (
                     <div
-                        className='bg-zinc-800 p-6 rounded-xl shadow-lg flex flex-col gap-4 hover:shadow-sky-500/30 transition-all duration-300 w-full max-w-[400px] mx-auto'
+                        className='bg-zinc-800/50 p-6 rounded-xl shadow-lg flex flex-col gap-4 hover:shadow-sky-500/30 transition-all duration-300 w-full max-w-[400px] mx-auto'
                         key={key}
                     >
 
@@ -57,7 +57,7 @@ function Reviews() {
                         </div>
 
 
-                        <p className='text-zinc-400 leading-relaxed text-sm sm:text-base'>
+                        <p className='text-white leading-relaxed text-sm sm:text-base'>
                             "{content}"
                         </p>
 
@@ -73,7 +73,7 @@ function Reviews() {
 
                             <div>
                                 <p className='text-lg font-semibold text-zinc-100'>{name}</p>
-                                <p className='text-sm text-zinc-500'>{company}</p>
+                                <p className='text-sm text-white'>{company}</p>
                             </div>
                         </div>
                     </div>

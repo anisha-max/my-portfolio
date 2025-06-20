@@ -39,7 +39,7 @@ const ProjectCard = () => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl font-bold text-white">My Projects</h2>
-        <p className="text-zinc-400 text-lg mt-4 max-w-2xl mx-auto">
+        <p className="text-white text-lg mt-4 max-w-2xl mx-auto">
           Explore some of my work built with modern tools, clean UI, and focus on scalability.
         </p>
       </motion.div>
@@ -48,7 +48,7 @@ const ProjectCard = () => {
         {projects.map(({ title, gitLink, tech, src }, index) => (
           <motion.div
             key={index}
-            className="relative bg-zinc-800 rounded-xl shadow-lg ring-1 ring-zinc-700/40 
+            className="relative bg-zinc-800/50 rounded-xl shadow-lg ring-1 ring-zinc-700/40 
                        hover:ring-sky-500/30 hover:shadow-sky-500/20 
                        transition-all duration-300 hover:scale-105 active:scale-95"
             whileHover={{ y: -4 }}
@@ -68,7 +68,7 @@ const ProjectCard = () => {
                 {tech.map((item, i) => (
                   <span
                     key={i}
-                    className="text-xs text-zinc-300 bg-zinc-700/30 px-3 py-1 rounded-full backdrop-blur-sm hover:bg-zinc-600 transition"
+                    className="text-xs text-white bg-zinc-700/30 px-3 py-1 rounded-full backdrop-blur-sm hover:bg-zinc-600 transition"
                   >
                     #{item}
                   </span>

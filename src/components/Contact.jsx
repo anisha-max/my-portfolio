@@ -12,7 +12,6 @@ const socialLinks = [
 function Contact() {
     return (
         <section className='container mt-8 px-4 py-12 rounded-lg text-zinc-100'>
-         
             <motion.div
         className="md:mx-20 mb-20 py-14"
         initial={{ opacity: 0, y: 60 }}
@@ -20,8 +19,6 @@ function Contact() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
- 
-    
             <div className='lg:grid lg:grid-cols-2 lg:gap-12 items-start'>
           
                 <div className='lg:flex lg:flex-col justify-center mb-8 lg:mb-0'>
@@ -29,7 +26,7 @@ function Contact() {
                         Contact for Collaboration
                     </h2>
 
-                    <p className='text-zinc-400 mb-6 max-w-md'>
+                    <p className='text-white mb-6 max-w-md'>
                         I am always open to discussing new projects, ideas, or
                         opportunities. Reach out and let’s build something amazing together!
                     </p>
@@ -60,7 +57,7 @@ function Contact() {
                     <div className='flex flex-col gap-2'>
                         <label
                             htmlFor="name"
-                            className='text-sm font-medium text-zinc-300'
+                            className='text-sm font-medium text-white'
                         >
                             Name
                         </label>
@@ -78,7 +75,7 @@ function Contact() {
                     <div className='flex flex-col gap-2'>
                         <label
                             htmlFor="email"
-                            className='text-sm font-medium text-zinc-300'
+                            className='text-sm font-medium text-white'
                         >
                             Email
                         </label>
@@ -94,7 +91,7 @@ function Contact() {
                     <div className='flex flex-col gap-2'>
                         <label
                             htmlFor="message"
-                            className='text-sm font-medium text-zinc-300'
+                            className='text-sm font-medium text-white'
                         >
                             Message
                         </label>

@@ -67,7 +67,7 @@ function Github() {
         </motion.figure>
 
         <motion.div
-          className="p-8 rounded-xl shadow-lg mt-10 lg:mt-0 space-y-4 bg-zinc-800 backdrop-blur-md text-gray-100"
+          className="p-8 rounded-xl shadow-lg mt-10 lg:mt-0 space-y-4 bg-zinc-800/50 backdrop-blur-md text-gray-100"
           variants={profileCardVariants}
           whileHover="hover"
         >
@@ -100,7 +100,7 @@ function Github() {
           variants={itemVariants}
         >
           <motion.div
-            className="rounded-xl shadow-lg p-6 backdrop-blur-md bg-zinc-800 text-gray-100"
+            className="rounded-xl shadow-lg p-6 backdrop-blur-md bg-zinc-800/50 text-gray-100"
             variants={profileCardVariants}
             whileHover="hover"
           >

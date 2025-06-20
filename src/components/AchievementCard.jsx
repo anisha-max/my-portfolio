@@ -110,7 +110,7 @@ export default function AchievementCard({ achievement, index }) {
           />
 
           <motion.p 
-            className="text-zinc-300 leading-relaxed"
+            className="text-white leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 + 0.6 }}

@@ -61,7 +61,7 @@ function Skill() {
         <h2 className="text-3xl font-bold text-white mb-3">
           Essential Tools I Use
         </h2>
-        <p className="text-zinc-400 max-w-2xl ">
+        <p className="text-white max-w-2xl ">
           Mastering modern technologies to create scalable, efficient, and
           high-performing applications.
         </p>
@@ -72,7 +72,7 @@ function Skill() {
         {skills.map(({ image, name, des }, key) => (
           <div
             key={key}
-            className="bg-zinc-800 rounded-xl p-2 md:p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
+            className="bg-zinc-800/50 rounded-xl p-2 md:p-5 shadow-lg transition-all duration-300 hover:shadow-sky-500/20 hover:-translate-y-2 cursor-pointer"
           >
             <div className="flex items-center gap-4">
  
@@ -86,7 +86,7 @@ function Skill() {
               </figure>
               <div>
                 <h3 className="text-lg font-bold text-white">{name}</h3>
-                <p className="text-sm text-zinc-400">{des}</p>
+                <p className="text-sm text-white">{des}</p>
               </div>
             </div>
           </div>
