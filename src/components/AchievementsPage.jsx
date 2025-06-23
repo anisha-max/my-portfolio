@@ -73,9 +73,9 @@ const statsVariants = {
 };
 
 const stats = [
-  { icon: Trophy, label: " Internship", value: "3+" },
+  { icon: Trophy, label: " Internship", value: "6 month" },
   { icon: Award, label: "Project", value: "5+" },
-  { icon: Star, label: "CGPA", value: "92+" },
+  { icon: Star, label: "CGPA", value: "9.2+" },
 ];
 
 export default function AchievementsPage() {
