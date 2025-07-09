@@ -61,7 +61,7 @@ function Github() {
         >
           <img
             className="rounded-lg object-cover "
-            src="/my-portfolio/me.png"
+            src="/my-portfolio/me.JPG"
             alt="Developer"
           />
         </motion.figure>

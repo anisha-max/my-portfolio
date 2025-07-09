@@ -2,6 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
+     {
+    title: "Fullstack Live Video Project",
+    gitLink: "https://fullstack-video-application.onrender.com",
+    tech: ["Nextjs", "MongoDB", "NextAuth", "ImageKit", "Render"],
+    src: "/my-portfolio/project.jpg",
+  },
+   {
+    title: "Portfolio",
+    gitLink: "/",
+    tech:["HTML", "CSS", "JavaScript", "React.js"],
+    src: "/my-portfolio/portfolio.png",
+  },
+   {
+    title: "Internship Contribution",
+    gitLink: "https://www.sevenunique.com/",
+    tech: ["Node.js", "MongoDB", "React", "Axios", "Redux"],
+    src: "/my-portfolio/sevenunique.png",
+  },
   {
     title: "All React Projects",
     gitLink: "https://github.com/anisha-max/Reactprojects",
@@ -14,18 +32,14 @@ const projects = [
     tech: ["JavaScript", "API"],
     src: "/my-portfolio/js.png",
   },
-  {
-    title: "Internship Contribution",
-    gitLink: "https://www.sevenunique.com/",
-    tech: ["Node.js", "MongoDB", "React", "Axios", "Redux"],
-    src: "/my-portfolio/sevenunique.png",
-  },
+ 
   {
     title: "Galaxy Game",
     gitLink: "https://github.com/anisha-max/Previous-projects",
     tech: ["Python"],
     src: "/my-portfolio/galaxy.png",
   },
+
 ];
 
 const ProjectCard = () => {
