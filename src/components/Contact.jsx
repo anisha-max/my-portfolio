@@ -23,7 +23,7 @@ function Contact() {
           
                 <div className='lg:flex lg:flex-col justify-center mb-8 lg:mb-0'>
                 <h2 className='text-3xl md:text-4xl font-bold text-white mb-4 break-words leading-tight'>
-                        Contact for Collaboration
+                        Contact Me
                     </h2>
 
                     <p className='text-white mb-6 max-w-md'>

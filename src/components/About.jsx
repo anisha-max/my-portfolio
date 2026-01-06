@@ -20,8 +20,12 @@ export default function About() {
       >
         <div className="bg-zinc-800/50 rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-sky-500/20 transition duration-300">
           <p className="text-white text-lg leading-relaxed">
-            I’m a Full Stack Developer with hands-on internship experience and a strong portfolio of over 10 projects—from dynamic user interfaces to full-fledged web apps. I've actively competed in 3+ hackathons, honing my skills in real-time collaboration and innovative problem-solving. I'm passionate about building user-centric, efficient, and scalable applications, and I'm currently open to work opportunities where I can contribute value to your team.
-          </p>
+Over the past year, I’ve been working as a Frontend Developer, gaining real-world experience through in house and multiple client projects. I enjoy transforming ideas into practical digital solutions—whether it’s building responsive dashboards, interactive interfaces, or intuitive user journeys. My work often involves converting Figma designs into clean, efficient, and pixel-perfect UIs while ensuring smooth performance and accessibility across devices.
+<br/>
+Along with my frontend expertise in React, Next.js, Tailwind CSS, JavaScript, and CSS, I also have a strong foundation in full-stack development, including experience with Node.js, Express, REST APIs, and databases. This helps me understand applications beyond just the UI and collaborate better across teams.
+<br/>
+
+This journey has helped me grow as a detail-oriented, problem-solving, and collaborative developer who loves learning, improving, and building meaningful digital products.          </p>
 
           <div className="flex flex-wrap gap-6 md:gap-10 pt-8">
             {stats.map(({ label, number }, index) => (

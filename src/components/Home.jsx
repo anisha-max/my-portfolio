@@ -19,10 +19,10 @@ function Home() {
             <h1 className='text-6xl'>Anisha Parmar</h1>
             <p className='italic text-[26px] pt-2 font-bold text-sky-400'>Web Developer</p>
             <p className=" text-[20px] max-w- mb-4">
-              Full Stack Developer passionate about building clean, scalable, and intuitive applications — built with experience, attention to detail, and a commitment to writing efficient, maintainable code. I specialize in the <span className='text-[21px] text-sky-400 font-bold'>MERN</span> stack (MongoDB, Express, React, Node.js) and also leverage <span className='text-[21px] font-bold text-sky-400 bold'>Next.js</span> for building high-performance, server-rendered applications. I focus on delivering high-quality solutions that solve real-world problems and provide great user experiences.
+I am a Frontend Developer with 1 year of hands-on experience and 2 internships, with a strong foundation in Full Stack development. I specialize in building responsive, user-friendly interfaces using<span className='text-[21px] text-sky-400 font-bold'> React, JavaScript, HTML, and CSS, </span> while also having experience working with backend technologies like <span className='text-[21px] text-sky-400 font-bold'>Node.js, Express, and databases </span>. I focus on writing clean, efficient code and creating seamless web experiences.
             </p>
             <a
-              href='AnishaParmarResume.pdf' target='_blank'
+              href='/AnishaParmarResume.pdf' target='_blank'
               className="px-4 my-4 py-2 rounded text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:from-sky-600 hover:via-sky-700 hover:to-sky-800 transition duration-300"
             >
               Download Resume 

@@ -2,10 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
+    {
+    title: "Fintech Web Application Frontend",
+    gitLink: "https://utility.finuniques.in/",
+    tech: ["Nextjs", "MongoDB", "React", "HTML", "CSS"],
+    src: "/my-portfolio/bbps.png",
+  },
      {
     title: "Fullstack Live Video Project",
     gitLink: "https://fullstack-video-application.onrender.com",
-    tech: ["Nextjs", "MongoDB", "NextAuth", "ImageKit", "Render"],
+    tech: ["Nextjs", "MongoDB", "NextAuth", "ImageKit"],
     src: "/my-portfolio/project.jpg",
   },
    {
